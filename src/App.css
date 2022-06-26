@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --blue: #008bff;
+  --color: #f74107;
+}
+.mt-13 {
+  margin-top: 13px;
+}
+.rd-12 {
+  border-radius: 12px;
+}
+.p-8 {
+  padding: 8px;
+}
+.mb-7 {
+  margin-bottom: 12px;
+}
+.text-center {
+  text-align: center;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.card {
+  padding: 20px;
+  color: white;
+  background: #ffffff21;
+  transition: 1s ease-in;
+  margin: 16px;
+  display: flex;
+  border-radius: 12px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.card h1 {
+  font-size: 20px;
+}
+.card p {
+  font-size: 16px;
+}
+.profile .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  border: 5px solid var(--color);
+  margin: 15px;
+}
+.card .btn_action {
+  padding: 8px 10px;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--color);
+  font-size: 16px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  align-items: center;
+}
+.btn_action:hover {
+  background: var(--color);
+  border: 1px solid white;
+}
+.bg_content {
+  background-color: #292727bf;
+  margin-bottom: 10px;
+  padding: 10px 30px;
+}
+.bg_content .name {
+  font-size: 1em;
+  padding: 5px;
+  font-weight: bold;
+}
+.bg_content .about {
+  font-size: 1em;
+}
+.card .btn_action span {
+  margin-left: 10px;
+}
+.highlight {
+  color: var(--color);
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.card_body {
+  min-width: 320px;
+  z-index: 2;
+  position: relative;
+}
+.toggle-btn,.dark-mode {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggle-btn{
+  z-index: 3;
+  background-color: whitesmoke;
+  border:2px solid var(--color);
+  box-shadow: 1px 1px 4px 3px #bfb3b3be;
+}
+.card .dark-mode{
+  z-index: 1;
+  background-color: #323030;
+  transition:1s ease-in;
+  transform: scale(50);
+  border:1px dashed var(--color);
+}
+.card.dark.toggle-btn{
+  background-color: #323030;
+}
+.card.dark .dark-mode{
+  transition:1s ease-in;
+  transform: scale(50);
+}
+.card.dark{
+  --color: #22d722;
+  background-color: #323030;
+  transition: 1s ease-in;
+}
+@media screen and(max-width:580px) {
+  body{
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
